@@ -376,6 +376,7 @@
       </el-dialog>
     </div>
 
+    <!-- 预览-表单数据弹窗 -->
     <div
       v-if="showFormDataDialogFlag"
       class=""
@@ -442,51 +443,24 @@
         :close-on-press-escape="false"
         :destroy-on-close="true"
       >
-        <el-tabs
-          type="border-card"
-          class="no-box-shadow no-padding"
-          v-model="activeSFCTab"
-        >
-          <el-tab-pane label="Vue2" name="vue2">
-            <code-editor
-              :mode="'html'"
-              :readonly="true"
-              v-model="sfcCode"
-              :user-worker="false"
-            ></code-editor>
-          </el-tab-pane>
-          <el-tab-pane label="Vue3" name="vue3">
-            <code-editor
-              :mode="'html'"
-              :readonly="true"
-              v-model="sfcCodeV3"
-              :user-worker="false"
-            ></code-editor>
-          </el-tab-pane>
-        </el-tabs>
+        <code-editor
+          :mode="'html'"
+          :readonly="true"
+          v-model="sfcCodeV3"
+          :user-worker="false"
+        ></code-editor>
         <template #footer>
           <div class="dialog-footer">
-            <el-button
-              type="primary"
-              class="copy-vue2-sfc-btn"
-              :data-clipboard-text="sfcCode"
-              @click="copyV2SFC"
-            >
-              {{ i18nt('designer.hint.copyVue2SFC') }}</el-button
-            >
             <el-button
               type="primary"
               class="copy-vue3-sfc-btn"
               :data-clipboard-text="sfcCodeV3"
               @click="copyV3SFC"
             >
-              {{ i18nt('designer.hint.copyVue3SFC') }}</el-button
+              {{ i18nt('designer.hint.copySFC') }}</el-button
             >
-            <el-button @click="saveV2SFC">{{
-              i18nt('designer.hint.saveVue2SFC')
-            }}</el-button>
             <el-button @click="saveV3SFC">{{
-              i18nt('designer.hint.saveVue3SFC')
+              i18nt('designer.hint.saveSFC')
             }}</el-button>
             <el-button @click="showExportSFCDialogFlag = false">
               {{ i18nt('designer.hint.closePreview') }}</el-button
@@ -560,11 +534,9 @@ export default {
       vueCode: '',
       htmlCode: '',
 
-      sfcCode: '',
       sfcCodeV3: '',
 
       activeCodeTab: 'vue',
-      activeSFCTab: 'vue2',
 
       testFormData: {
         // 'userName': '666888',
@@ -937,29 +909,13 @@ export default {
 
     generateSFC() {
       loadBeautifier(beautifier => {
-        this.sfcCode = genSFC(
+        this.sfcCodeV3 = genSFC(
           this.designer.formConfig,
           this.designer.widgetList,
           beautifier
         );
-        this.sfcCodeV3 = genSFC(
-          this.designer.formConfig,
-          this.designer.widgetList,
-          beautifier,
-          true
-        );
         this.showExportSFCDialogFlag = true;
       });
-    },
-
-    copyV2SFC(e) {
-      copyToClipboard(
-        this.sfcCode,
-        e,
-        this.$message,
-        this.i18nt('designer.hint.copySFCSuccess'),
-        this.i18nt('designer.hint.copySFCFail')
-      );
     },
 
     copyV3SFC(e) {
@@ -970,10 +926,6 @@ export default {
         this.i18nt('designer.hint.copySFCSuccess'),
         this.i18nt('designer.hint.copySFCFail')
       );
-    },
-
-    saveV2SFC() {
-      this.saveAsFile(this.sfcCode, `vformV2-${generateId()}.vue`);
     },
 
     saveV3SFC() {
