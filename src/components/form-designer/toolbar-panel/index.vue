@@ -1,9 +1,11 @@
 <template>
   <div class="toolbar-container">
     <div class="left-toolbar">
-      <el-button link type="primary" :disabled="undoDisabled" :title="i18nt('designer.toolbar.undoHint')" @click="undoHistory">
+      <!-- 撤销 -->
+      <el-button link :disabled="undoDisabled" :title="i18nt('designer.toolbar.undoHint')" @click="undoHistory">
         <svg-icon icon-class="undo" /></el-button>
-      <el-button link type="primary" :disabled="redoDisabled" :title="i18nt('designer.toolbar.redoHint')" @click="redoHistory">
+      <!-- 重做 -->
+      <el-button link :disabled="redoDisabled" :title="i18nt('designer.toolbar.redoHint')" @click="redoHistory">
         <svg-icon icon-class="redo" /></el-button>
       <el-button-group style="margin-left: 20px">
         <el-button :type="layoutType === 'PC' ? 'info': ''" @click="changeLayoutType('PC')">
@@ -25,18 +27,35 @@
 
     <div class="right-toolbar" :style="{width: toolbarWidth + 'px'}">
       <div class="right-toolbar-con">
-        <el-button v-if="showToolButton('clearDesignerButton')" link type="primary" @click="clearFormWidget">
+        <!-- 清空 -->
+        <el-button v-if="showToolButton('clearDesignerButton')" link @click="clearFormWidget">
           <svg-icon icon-class="el-delete" />{{i18nt('designer.toolbar.clear')}}</el-button>
-        <el-button v-if="showToolButton('previewFormButton')" link type="primary" @click="previewForm">
+        <!-- 预览 -->
+        <el-button v-if="showToolButton('previewFormButton')" link @click="previewForm">
           <svg-icon icon-class="el-view" />{{i18nt('designer.toolbar.preview')}}</el-button>
-        <el-button v-if="showToolButton('importJsonButton')" link type="primary" @click="importJson">
+        <!-- 导入 -->
+        <el-button v-if="showToolButton('importJsonButton')" link @click="importJson">
           {{i18nt('designer.toolbar.importJson')}}</el-button>
-        <el-button v-if="showToolButton('exportJsonButton')" link type="primary" @click="exportJson">
+        <!-- 导出 -->
+        <el-button v-if="showToolButton('exportJsonButton')" link @click="exportJson">
           {{i18nt('designer.toolbar.exportJson')}}</el-button>
-        <el-button v-if="showToolButton('exportCodeButton')" link type="primary" @click="exportCode">
+        <!-- 导出渲染器示例代码 -->
+        <el-button v-if="showToolButton('exportCodeButton')" link @click="exportCode">
           {{i18nt('designer.toolbar.exportCode')}}</el-button>
-        <el-button v-if="showToolButton('generateSFCButton')" link type="primary" @click="generateSFC">
+        <!-- 生成 SFC -->
+        <el-button v-if="showToolButton('generateSFCButton')" link @click="generateSFC">
           <svg-icon icon-class="vue-sfc" />{{i18nt('designer.toolbar.generateSFC')}}</el-button>
+        <!-- 切换语言 -->
+        <el-dropdown @command="handleLanguageChanged">
+          <el-button link>
+            <svg-icon icon-class="el-languages"/>{{curLangName}}</el-button>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item command="zh-CN">{{ i18nt('application.zh-CN') }}</el-dropdown-item>
+              <el-dropdown-item command="en-US">{{ i18nt('application.en-US') }}</el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
         <template v-for="(idx, slotName) in $slots">
           <slot :name="slotName"></slot>
         </template>
@@ -195,7 +214,7 @@
     getQueryParam,
     traverseAllWidgets, addWindowResizeHandler
   } from "@/utils/util"
-  import i18n from '@/utils/i18n'
+  import i18n, { changeLocale } from '@/utils/i18n'
   import {generateCode} from "@/utils/code-generator"
   import {genSFC} from "@/utils/sfc-generator"
   import loadBeautifier from "@/utils/beautifierLoader"
@@ -224,7 +243,7 @@
       return {
         designerConfig: this.getDesignerConfig(),
 
-        toolbarWidth: 460,
+        toolbarWidth: 500,
         showPreviewDialogFlag: false,
         showImportJsonDialogFlag: false,
         showExportJsonDialogFlag: false,
@@ -274,6 +293,8 @@
           ],
         },
 
+        curLangName: '',
+        curLocale: '',
       }
     },
     computed: {
@@ -315,7 +336,9 @@
 
     },
     mounted() {
-      let maxTBWidth = this.designerConfig.toolbarMaxWidth || 460
+      this.initLocale()
+
+      let maxTBWidth = this.designerConfig.toolbarMaxWidth || 520
       let minTBWidth = this.designerConfig.toolbarMinWidth || 300
       let newTBWidth = window.innerWidth - 260 - 300 - 320 - 80
       this.toolbarWidth = newTBWidth >= maxTBWidth ? maxTBWidth : (newTBWidth <= minTBWidth ? minTBWidth : newTBWidth)
@@ -333,6 +356,26 @@
         }
 
         return !!this.designerConfig[configName]
+      },
+
+      changeLanguage(langName) {
+        changeLocale(langName)
+      },
+
+      handleLanguageChanged(command) {
+        this.changeLanguage(command)
+        this.curLangName = this.i18nt('application.' + command)
+      },
+
+      initLocale() {
+        this.curLocale = localStorage.getItem('v_form_locale')
+        if (!!this.vsCodeFlag) {
+          this.curLocale = this.curLocale || 'en-US'
+        } else {
+          this.curLocale = this.curLocale || 'zh-CN'
+        }
+        this.curLangName = this.i18nt('application.' + this.curLocale)
+        this.changeLanguage(this.curLocale)
       },
 
       buildTreeNodeOfWidget(widget, treeNode) {
@@ -749,7 +792,9 @@
     overflow: hidden;
 
     .right-toolbar-con {
+      display: flex;
       text-align: left;
+      padding: 10px 0;
       width: 600px;
     }
 
