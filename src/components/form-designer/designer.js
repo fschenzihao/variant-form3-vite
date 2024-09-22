@@ -11,7 +11,12 @@ import {containers, advancedFields, basicFields, customFields} from "@/component
 import {VARIANT_FORM_VERSION} from "@/utils/config"
 import eventBus from "@/utils/event-bus"
 
-export function createDesigner(vueInstance) {
+/**
+ * 
+ * @param componentInstance 组件实例
+ * @returns 
+ */
+export function createDesigner(componentInstance) {
   let defaultFormConfig = deepClone( getDefaultFormConfig() )
 
   return {
@@ -21,7 +26,7 @@ export function createDesigner(vueInstance) {
     selectedId: null,
     selectedWidget: null,
     selectedWidgetName: null,  //选中组件名称（唯一）
-    vueInstance: vueInstance,
+    vueInstance: componentInstance,
 
     formWidget: null,  //表单设计容器
 
@@ -37,11 +42,10 @@ export function createDesigner(vueInstance) {
       this.widgetList = []
       this.formConfig = deepClone(defaultFormConfig)
 
-      //输出版本信息和语雀链接
-      console.info(`%cVariantForm %cVer${VARIANT_FORM_VERSION} %chttps://www.yuque.com/visualdev/vform3`,
+      //输出版本信息
+      console.info(`%cTSLCPageDesigner %cVer${VARIANT_FORM_VERSION}`,
           "color:#409EFF;font-size: 22px;font-weight:bolder",
           "color:#999;font-size: 12px",
-          "color:#333"
       )
 
       if (!resetFormJson) {

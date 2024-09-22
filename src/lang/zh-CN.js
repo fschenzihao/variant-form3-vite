@@ -164,7 +164,7 @@ export default {
     setting: {
       basicSetting: '基本属性',
       attributeSetting: '属性设置',
-      commonSetting: '常见属性',
+      commonSetting: '通用属性',
       advancedSetting: '高级属性',
       eventSetting: '事件属性',
       uniqueName: '唯一名称',
@@ -321,7 +321,7 @@ export default {
       editFormEventHandler: '表单事件处理',
       formSFCSetting: '生成SFC设置',
       formModelName: '数据对象名称',
-      formRefName: '引用名称',
+      formRefName: '模板引用名称',
       formRulesName: '验证规则名称',
       syntaxCheckWarning: 'JS代码存在语法错误，请仔细检查！',
 
