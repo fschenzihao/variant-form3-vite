@@ -473,8 +473,8 @@
 </template>
 
 <script>
-import VFormRender from '@/components/form-render/index';
-import CodeEditor from '@/components/code-editor/index';
+import VFormRender from '@tslc/lowcode-designer-page/components/form-render/index';
+import CodeEditor from '@tslc/lowcode-designer-page/components/code-editor/index';
 import Clipboard from 'clipboard';
 import {
   deepClone,
@@ -483,14 +483,14 @@ import {
   getQueryParam,
   traverseAllWidgets,
   addWindowResizeHandler,
-} from '@/utils/util';
-import i18n, { changeLocale } from '@/utils/i18n';
-import { generateCode } from '@/utils/code-generator';
-import { genSFC } from '@/utils/sfc-generator';
-import loadBeautifier from '@/utils/beautifierLoader';
+} from '@tslc/lowcode-designer-page/utils/util';
+import i18n, { changeLocale } from '@tslc/lowcode-designer-page/utils/i18n';
+import { generateCode } from '@tslc/lowcode-designer-page/utils/code-generator';
+import { genSFC } from '@tslc/lowcode-designer-page/utils/sfc-generator';
+import loadBeautifier from '@tslc/lowcode-designer-page/utils/beautifierLoader';
 import { saveAs } from 'file-saver';
 import axios from 'axios';
-import SvgIcon from '@/components/svg-icon/index';
+import SvgIcon from '@tslc/lowcode-designer-page/components/svg-icon/index';
 
 export default {
   name: 'ToolbarPanel',

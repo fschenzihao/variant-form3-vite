@@ -36,15 +36,15 @@ import WidgetPanel from './widget-panel/index'
 import ToolbarPanel from './toolbar-panel/index'
 import SettingPanel from './setting-panel/index'
 import VFormWidget from './form-widget/index'
-import { createDesigner } from "@/components/form-designer/designer"
+import { createDesigner } from "@tslc/lowcode-designer-page/components/form-designer/designer"
 import {
   addWindowResizeHandler, deepClone, getQueryParam, getAllContainerWidgets,
   getAllFieldWidgets, traverseAllWidgets
-} from "@/utils/util"
-import { MOCK_CASE_URL, VARIANT_FORM_VERSION } from "@/utils/config"
-import i18n from "@/utils/i18n"
+} from "@tslc/lowcode-designer-page/utils/util"
+import { MOCK_CASE_URL, VARIANT_FORM_VERSION } from "@tslc/lowcode-designer-page/utils/config"
+import i18n from "@tslc/lowcode-designer-page/utils/i18n"
 import axios from 'axios'
-import SvgIcon from "@/components/svg-icon/index"
+import SvgIcon from "@tslc/lowcode-designer-page/components/svg-icon/index"
 
 export default {
   name: "VFormDesigner",

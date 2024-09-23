@@ -40,9 +40,9 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n";
-  import containerMixin from "@/components/form-designer/form-widget/container-widget/containerMixin";
-  import SvgIcon from '@/components/svg-icon'
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n";
+  import containerMixin from "@tslc/lowcode-designer-page/components/form-designer/form-widget/container-widget/containerMixin";
+  import SvgIcon from '@tslc/lowcode-designer-page/components/svg-icon'
 
   export default {
     name: "container-wrapper",

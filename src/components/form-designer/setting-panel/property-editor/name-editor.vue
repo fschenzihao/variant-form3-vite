@@ -19,9 +19,9 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
-  import {isEmptyStr} from "@/utils/util"
-  import SvgIcon from "@/components/svg-icon/index";
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
+  import {isEmptyStr} from "@tslc/lowcode-designer-page/utils/util"
+  import SvgIcon from "@tslc/lowcode-designer-page/components/svg-icon/index";
 
   export default {
     name: "name-editor",

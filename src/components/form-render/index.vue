@@ -38,14 +38,14 @@
 
 <script>
   //import ElForm from 'element-ui/packages/form/src/form.vue'  /* 用于源码调试Element UI */
-  import emitter from '@/utils/emitter'
+  import emitter from '@tslc/lowcode-designer-page/utils/emitter'
   import './container-item/index'
-  import FieldComponents from '@/components/form-designer/form-widget/field-widget/index'
+  import FieldComponents from '@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/index'
   import {
     generateId, deepClone, insertCustomCssToHead, insertGlobalFunctionsToHtml, getAllContainerWidgets,
     getAllFieldWidgets, traverseFieldWidgets, buildDefaultFormJson
-  } from "@/utils/util"
-  import i18n, { changeLocale } from "@/utils/i18n"
+  } from "@tslc/lowcode-designer-page/utils/util"
+  import i18n, { changeLocale } from "@tslc/lowcode-designer-page/utils/i18n"
 
   export default {
     name: "VFormRender",

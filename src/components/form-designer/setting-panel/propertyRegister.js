@@ -1,4 +1,4 @@
-//import { vfApp } from '@/utils/create-app'
+//import { vfApp } from '@tslc/lowcode-designer-page/utils/create-app'
 
 /**
  * 格式说明：属性名称==对应属性编辑器的组件名称

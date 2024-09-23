@@ -1,4 +1,4 @@
-import {buildClassAttr, buildContainerWidget, buildFieldWidget} from '@/utils/sfc-generator'
+import {buildClassAttr, buildContainerWidget, buildFieldWidget} from '@tslc/lowcode-designer-page/utils/sfc-generator'
 
 export const cardTemplateGenerator = function (cw, formConfig) {
   const wop = cw.options

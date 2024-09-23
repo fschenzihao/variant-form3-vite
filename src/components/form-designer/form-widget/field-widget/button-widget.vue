@@ -13,9 +13,9 @@
 
 <script>
   import StaticContentWrapper from './static-content-wrapper'
-  import emitter from '@/utils/emitter'
-  import i18n, {translate} from "@/utils/i18n";
-  import fieldMixin from "@/components/form-designer/form-widget/field-widget/fieldMixin";
+  import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+  import i18n, {translate} from "@tslc/lowcode-designer-page/utils/i18n";
+  import fieldMixin from "@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/fieldMixin";
 
   export default {
     name: "button-widget",

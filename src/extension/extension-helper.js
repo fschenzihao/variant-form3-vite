@@ -3,12 +3,12 @@ import {
   addBasicFieldSchema,
   addAdvancedFieldSchema,
   addCustomWidgetSchema
-} from '@/components/form-designer/widget-panel/widgetsConfig'
+} from '@tslc/lowcode-designer-page/components/form-designer/widget-panel/widgetsConfig'
 import {
   registerCommonProperty,
   registerAdvancedProperty,
   registerEventProperty
-} from '@/components/form-designer/setting-panel/propertyRegister'
+} from '@tslc/lowcode-designer-page/components/form-designer/setting-panel/propertyRegister'
 
 
 export default {

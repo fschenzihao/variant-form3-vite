@@ -1,22 +1,22 @@
-//import { vfApp } from '@/utils/create-app'
+//import { vfApp } from '@tslc/lowcode-designer-page/utils/create-app'
 
 import {
   addContainerWidgetSchema,
   addCustomWidgetSchema
-} from '@/components/form-designer/widget-panel/widgetsConfig'
-import * as PERegister from '@/components/form-designer/setting-panel/propertyRegister'
-import * as PEFactory from '@/components/form-designer/setting-panel/property-editor-factory.jsx'
+} from '@tslc/lowcode-designer-page/components/form-designer/widget-panel/widgetsConfig'
+import * as PERegister from '@tslc/lowcode-designer-page/components/form-designer/setting-panel/propertyRegister'
+import * as PEFactory from '@tslc/lowcode-designer-page/components/form-designer/setting-panel/property-editor-factory.jsx'
 
-import {cardSchema} from "@/extension/samples/extension-schema"
-import CardWidget from '@/extension/samples/card/card-widget'
-import CardItem from '@/extension/samples/card/card-item'
-import {registerCWGenerator} from '@/utils/sfc-generator'
-import {cardTemplateGenerator} from '@/extension/samples/extension-sfc-generator'
+import {cardSchema} from "@tslc/lowcode-designer-page/extension/samples/extension-schema"
+import CardWidget from '@tslc/lowcode-designer-page/extension/samples/card/card-widget'
+import CardItem from '@tslc/lowcode-designer-page/extension/samples/card/card-item'
+import {registerCWGenerator} from '@tslc/lowcode-designer-page/utils/sfc-generator'
+import {cardTemplateGenerator} from '@tslc/lowcode-designer-page/extension/samples/extension-sfc-generator'
 
-import {alertSchema} from "@/extension/samples/extension-schema"
-import AlertWidget from '@/extension/samples/alert/alert-widget'
-import {registerFWGenerator} from '@/utils/sfc-generator'
-import {alertTemplateGenerator} from '@/extension/samples/extension-sfc-generator'
+import {alertSchema} from "@tslc/lowcode-designer-page/extension/samples/extension-schema"
+import AlertWidget from '@tslc/lowcode-designer-page/extension/samples/alert/alert-widget'
+import {registerFWGenerator} from '@tslc/lowcode-designer-page/utils/sfc-generator'
+import {alertTemplateGenerator} from '@tslc/lowcode-designer-page/extension/samples/extension-sfc-generator'
 
 export const loadExtension = function (app) {
 

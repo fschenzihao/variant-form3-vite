@@ -1,6 +1,6 @@
-import {isNotNull, traverseContainerWidgets, traverseFieldWidgets} from "@/utils/util";
-import {translate} from "@/utils/i18n";
-import FormValidators, {getRegExp} from "@/utils/validators";
+import {isNotNull, traverseContainerWidgets, traverseFieldWidgets} from "@tslc/lowcode-designer-page/utils/util";
+import {translate} from "@tslc/lowcode-designer-page/utils/i18n";
+import FormValidators, {getRegExp} from "@tslc/lowcode-designer-page/utils/validators";
 
 export function buildDefaultValueListFn(formConfig, widgetList, resultList) {
   return function(fieldWidget) {

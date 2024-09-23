@@ -3,18 +3,18 @@ import axios from 'axios'
 import App from './App.vue'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import '@/styles/index.scss'
-import '@/iconfont/iconfont.css'
-import Draggable from '@/../lib/vuedraggable/dist/vuedraggable.umd.js'
-import {registerIcon} from '@/utils/el-icons'
+import '@tslc/lowcode-designer-page/styles/index.scss'
+import '@tslc/lowcode-designer-page/iconfont/iconfont.css'
+import Draggable from '@tslc/lowcode-designer-page/../lib/vuedraggable/dist/vuedraggable.umd.js'
+import {registerIcon} from '@tslc/lowcode-designer-page/utils/el-icons'
 import 'virtual:svg-icons-register'
 
-import ContainerWidgets from '@/components/form-designer/form-widget/container-widget/index'
-import ContainerItems from '@/components/form-render/container-item/index'
+import ContainerWidgets from '@tslc/lowcode-designer-page/components/form-designer/form-widget/container-widget/index'
+import ContainerItems from '@tslc/lowcode-designer-page/components/form-render/container-item/index'
 
-import { addDirective } from '@/utils/directive'
-import { installI18n } from '@/utils/i18n'
-import { loadExtension } from '@/extension/extension-loader'
+import { addDirective } from '@tslc/lowcode-designer-page/utils/directive'
+import { installI18n } from '@tslc/lowcode-designer-page/utils/i18n'
+import { loadExtension } from '@tslc/lowcode-designer-page/extension/extension-loader'
 
 if (typeof window !== 'undefined') {
   window.axios = axios

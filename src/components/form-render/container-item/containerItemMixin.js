@@ -1,4 +1,4 @@
-import { traverseFieldWidgetsOfContainer } from "@/utils/util";
+import { traverseFieldWidgetsOfContainer } from "@tslc/lowcode-designer-page/utils/util";
 
 export default {
   inject: ['getFormConfig', 'getGlobalDsv'],

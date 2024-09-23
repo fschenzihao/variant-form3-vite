@@ -43,12 +43,12 @@
 </template>
 
 <script>
-  import emitter from '@/utils/emitter'
-  import i18n from "@/utils/i18n"
-  import refMixin from "@/components/form-render/refMixin"
-  import ContainerItemWrapper from '@/components/form-render/container-item/container-item-wrapper'
-  import containerItemMixin from "@/components/form-render/container-item/containerItemMixin"
-  import FieldComponents from '@/components/form-designer/form-widget/field-widget/index'
+  import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
+  import refMixin from "@tslc/lowcode-designer-page/components/form-render/refMixin"
+  import ContainerItemWrapper from '@tslc/lowcode-designer-page/components/form-render/container-item/container-item-wrapper'
+  import containerItemMixin from "@tslc/lowcode-designer-page/components/form-render/container-item/containerItemMixin"
+  import FieldComponents from '@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/index'
   import { ArrowDown, ArrowUp } from '@element-plus/icons-vue'
 
   export default {

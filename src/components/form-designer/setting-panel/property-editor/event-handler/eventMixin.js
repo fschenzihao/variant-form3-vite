@@ -1,5 +1,5 @@
-import emitter from '@/utils/emitter'
-import eventBus from "@/utils/event-bus"
+import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+import eventBus from "@tslc/lowcode-designer-page/utils/event-bus"
 
 export default {
   mixins: [emitter],

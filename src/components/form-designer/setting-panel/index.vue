@@ -176,14 +176,14 @@
 </template>
 
 <script>
-import CodeEditor from '@/components/code-editor/index'
+import CodeEditor from '@tslc/lowcode-designer-page/components/code-editor/index'
 import PropertyEditors from './property-editor/index'
 import FormSetting from './form-setting'
 import WidgetProperties from './propertyRegister'
-import { addWindowResizeHandler } from '@/utils/util'
-import i18n from '@/utils/i18n'
-import emitter from '@/utils/emitter'
-import { propertyRegistered } from '@/components/form-designer/setting-panel/propertyRegister'
+import { addWindowResizeHandler } from '@tslc/lowcode-designer-page/utils/util'
+import i18n from '@tslc/lowcode-designer-page/utils/i18n'
+import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+import { propertyRegistered } from '@tslc/lowcode-designer-page/components/form-designer/setting-panel/propertyRegister'
 
 const { COMMON_PROPERTIES, ADVANCED_PROPERTIES, EVENT_PROPERTIES } = WidgetProperties
 

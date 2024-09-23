@@ -1,5 +1,5 @@
-import {translate} from "@/utils/i18n"
-import emitter from '@/utils/emitter'
+import {translate} from "@tslc/lowcode-designer-page/utils/i18n"
+import emitter from '@tslc/lowcode-designer-page/utils/emitter'
 
 export const createInputTextEditor = function (propName, propLabelKey) {
   return {

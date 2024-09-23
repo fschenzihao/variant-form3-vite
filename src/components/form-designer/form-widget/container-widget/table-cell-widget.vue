@@ -55,10 +55,10 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
-  import FieldComponents from '@/components/form-designer/form-widget/field-widget/index'
-  import refMixinDesign from "@/components/form-designer/refMixinDesign"
-  import SvgIcon from '@/components/svg-icon'
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
+  import FieldComponents from '@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/index'
+  import refMixinDesign from "@tslc/lowcode-designer-page/components/form-designer/refMixinDesign"
+  import SvgIcon from '@tslc/lowcode-designer-page/components/svg-icon'
 
   export default {
     name: "TableCellWidget",

@@ -1,7 +1,7 @@
-import {isNotNull} from "@/utils/util";
-import {genVue2JS} from "@/utils/vue2js-generator";
-import {beautifierOpts} from "@/utils/beautifierLoader";
-import {genVue3JS} from "@/utils/vue3js-generator";
+import {isNotNull} from "@tslc/lowcode-designer-page/utils/util";
+import {genVue2JS} from "@tslc/lowcode-designer-page/utils/vue2js-generator";
+import {beautifierOpts} from "@tslc/lowcode-designer-page/utils/beautifierLoader";
+import {genVue3JS} from "@tslc/lowcode-designer-page/utils/vue3js-generator";
 
 export function buildClassAttr(ctn, defaultClass) {
   const cop = ctn.options

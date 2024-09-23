@@ -1,4 +1,4 @@
-//import { vfApp } from '@/utils/create-app'
+//import { vfApp } from '@tslc/lowcode-designer-page/utils/create-app'
 
 export function addDirective(app) {
 

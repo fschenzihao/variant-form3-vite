@@ -1,7 +1,6 @@
 {
-  "name": "variant-form3",
-  "version": "3.0.10",
-  "private": false,
+  "name": "@tslc/lowcode-designer-page",
+  "version": "1.0.0",
   "scripts": {
     "serve": "vite",
     "build": "vite build",
@@ -32,10 +31,5 @@
     "sass": "^1.45.0",
     "vite": "2.7.3",
     "vite-plugin-svg-icons": "^1.0.5"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

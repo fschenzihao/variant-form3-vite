@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
-  import OptionItemsSetting from "@/components/form-designer/setting-panel/option-items-setting"
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
+  import OptionItemsSetting from "@tslc/lowcode-designer-page/components/form-designer/setting-panel/option-items-setting"
 
   export default {
     name: "optionItems-editor",

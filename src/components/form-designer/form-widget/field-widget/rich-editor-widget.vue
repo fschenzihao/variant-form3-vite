@@ -26,10 +26,10 @@
 
 <script>
   import FormItemWrapper from './form-item-wrapper'
-  import emitter from '@/utils/emitter'
-  import i18n, {translate} from "@/utils/i18n";
-  import {deepClone} from "@/utils/util";
-  import fieldMixin from "@/components/form-designer/form-widget/field-widget/fieldMixin";
+  import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+  import i18n, {translate} from "@tslc/lowcode-designer-page/utils/i18n";
+  import {deepClone} from "@tslc/lowcode-designer-page/utils/util";
+  import fieldMixin from "@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/fieldMixin";
 
   import { Quill, quillEditor } from 'vue3-quill'
 

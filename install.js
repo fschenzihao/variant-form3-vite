@@ -1,19 +1,19 @@
 import axios from 'axios'
 
-import VFormDesigner from '@/components/form-designer/index.vue'
-import VFormRender from '@/components/form-render/index.vue'
+import VFormDesigner from '@tslc/lowcode-designer-page/components/form-designer/index.vue'
+import VFormRender from '@tslc/lowcode-designer-page/components/form-render/index.vue'
 
-import Draggable from '@/../lib/vuedraggable/dist/vuedraggable.umd.js'
-import {registerIcon} from '@/utils/el-icons'
+import Draggable from '@tslc/lowcode-designer-page/../lib/vuedraggable/dist/vuedraggable.umd.js'
+import {registerIcon} from '@tslc/lowcode-designer-page/utils/el-icons'
 import 'virtual:svg-icons-register'
-import '@/iconfont/iconfont.css'
+import '@tslc/lowcode-designer-page/iconfont/iconfont.css'
 
-import ContainerWidgets from '@/components/form-designer/form-widget/container-widget/index'
-import ContainerItems from '@/components/form-render/container-item/index'
+import ContainerWidgets from '@tslc/lowcode-designer-page/components/form-designer/form-widget/container-widget/index'
+import ContainerItems from '@tslc/lowcode-designer-page/components/form-render/container-item/index'
 
-import { addDirective } from '@/utils/directive'
-import { installI18n } from '@/utils/i18n'
-import { loadExtension } from '@/extension/extension-loader'
+import { addDirective } from '@tslc/lowcode-designer-page/utils/directive'
+import { installI18n } from '@tslc/lowcode-designer-page/utils/i18n'
+import { loadExtension } from '@tslc/lowcode-designer-page/extension/extension-loader'
 
 
 VFormDesigner.install = function (app) {

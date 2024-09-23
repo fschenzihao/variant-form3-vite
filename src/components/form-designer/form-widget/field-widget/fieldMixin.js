@@ -1,6 +1,6 @@
-import {deepClone} from "@/utils/util"
-import FormValidators from '@/utils/validators'
-import eventBus from "@/utils/event-bus"
+import {deepClone} from "@tslc/lowcode-designer-page/utils/util"
+import FormValidators from '@tslc/lowcode-designer-page/utils/validators'
+import eventBus from "@tslc/lowcode-designer-page/utils/event-bus"
 
 export default {
   inject: ['refList', 'getFormConfig', 'getGlobalDsv', 'globalOptionData', 'globalModel', 'getOptionData'],

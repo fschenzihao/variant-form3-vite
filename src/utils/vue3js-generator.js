@@ -3,8 +3,8 @@ import {
   buildDefaultValueListFn,
   buildFieldOptionsFn,
   buildRulesListFn, buildUploadDataFn
-} from "@/utils/vue2js-generator";
-import {traverseFieldWidgets} from "@/utils/util";
+} from "@tslc/lowcode-designer-page/utils/vue2js-generator";
+import {traverseFieldWidgets} from "@tslc/lowcode-designer-page/utils/util";
 
 export const genVue3JS = function (formConfig, widgetList) {
   let defaultValueList = []

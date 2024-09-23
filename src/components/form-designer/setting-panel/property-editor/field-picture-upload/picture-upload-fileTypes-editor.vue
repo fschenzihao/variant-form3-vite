@@ -18,8 +18,8 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
-  import SvgIcon from "@/components/svg-icon/index";
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
+  import SvgIcon from "@tslc/lowcode-designer-page/components/svg-icon/index";
 
   export default {
     name: "picture-upload-fileTypes-editor",

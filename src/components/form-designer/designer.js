@@ -6,10 +6,10 @@
  * remark: 如果要分发VForm源码，需在本文件顶部保留此文件头信息！！
  */
 
-import {deepClone, generateId, getDefaultFormConfig, overwriteObj} from "@/utils/util"
-import {containers, advancedFields, basicFields, customFields} from "@/components/form-designer/widget-panel/widgetsConfig.js"
-import {VARIANT_FORM_VERSION} from "@/utils/config"
-import eventBus from "@/utils/event-bus"
+import {deepClone, generateId, getDefaultFormConfig, overwriteObj} from "@tslc/lowcode-designer-page/utils/util"
+import {containers, advancedFields, basicFields, customFields} from "@tslc/lowcode-designer-page/components/form-designer/widget-panel/widgetsConfig.js"
+import {VARIANT_FORM_VERSION} from "@tslc/lowcode-designer-page/utils/config"
+import eventBus from "@tslc/lowcode-designer-page/utils/event-bus"
 
 /**
  * 

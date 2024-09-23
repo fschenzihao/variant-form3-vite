@@ -93,19 +93,19 @@
 <script>
   import {containers as CONS, basicFields as BFS, advancedFields as AFS, customFields as CFS} from "./widgetsConfig"
   import {formTemplates} from './templatesConfig'
-  import {addWindowResizeHandler, generateId} from "@/utils/util"
-  import i18n from "@/utils/i18n"
+  import {addWindowResizeHandler, generateId} from "@tslc/lowcode-designer-page/utils/util"
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
   import axios from 'axios'
-  import SvgIcon from "@/components/svg-icon/index";
+  import SvgIcon from "@tslc/lowcode-designer-page/components/svg-icon/index";
 
-  // import ftImg1 from '@/assets/ft-images/t1.png'
-  // import ftImg2 from '@/assets/ft-images/t2.png'
-  // import ftImg3 from '@/assets/ft-images/t3.png'
-  // import ftImg4 from '@/assets/ft-images/t4.png'
-  // import ftImg5 from '@/assets/ft-images/t5.png'
-  // import ftImg6 from '@/assets/ft-images/t6.png'
-  // import ftImg7 from '@/assets/ft-images/t7.png'
-  // import ftImg8 from '@/assets/ft-images/t8.png'
+  // import ftImg1 from '@tslc/lowcode-designer-page/assets/ft-images/t1.png'
+  // import ftImg2 from '@tslc/lowcode-designer-page/assets/ft-images/t2.png'
+  // import ftImg3 from '@tslc/lowcode-designer-page/assets/ft-images/t3.png'
+  // import ftImg4 from '@tslc/lowcode-designer-page/assets/ft-images/t4.png'
+  // import ftImg5 from '@tslc/lowcode-designer-page/assets/ft-images/t5.png'
+  // import ftImg6 from '@tslc/lowcode-designer-page/assets/ft-images/t6.png'
+  // import ftImg7 from '@tslc/lowcode-designer-page/assets/ft-images/t7.png'
+  // import ftImg8 from '@tslc/lowcode-designer-page/assets/ft-images/t8.png'
 
   export default {
     name: "FieldPanel",

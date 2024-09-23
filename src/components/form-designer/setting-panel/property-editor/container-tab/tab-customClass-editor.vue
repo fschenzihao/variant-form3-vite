@@ -35,9 +35,9 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
   //import Draggable from 'vuedraggable'
-  import {deepClone} from "@/utils/util";
+  import {deepClone} from "@tslc/lowcode-designer-page/utils/util";
 
   export default {
     name: "tab-customClass-editor",

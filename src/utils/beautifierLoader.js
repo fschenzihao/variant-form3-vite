@@ -1,5 +1,5 @@
-import {loadRemoteScript} from "@/utils/util";
-import {BEAUTIFIER_PATH} from "@/utils/config";
+import {loadRemoteScript} from "@tslc/lowcode-designer-page/utils/util";
+import {BEAUTIFIER_PATH} from "@tslc/lowcode-designer-page/utils/config";
 
 let beautifierObj
 

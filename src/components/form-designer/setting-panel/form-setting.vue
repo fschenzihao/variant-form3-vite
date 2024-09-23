@@ -263,9 +263,9 @@
 </template>
 
 <script>
-import i18n from '@/utils/i18n'
-import CodeEditor from '@/components/code-editor/index'
-import { deepClone, insertCustomCssToHead, insertGlobalFunctionsToHtml } from '@/utils/util'
+import i18n from '@tslc/lowcode-designer-page/utils/i18n'
+import CodeEditor from '@tslc/lowcode-designer-page/components/code-editor/index'
+import { deepClone, insertCustomCssToHead, insertGlobalFunctionsToHtml } from '@tslc/lowcode-designer-page/utils/util'
 
 export default {
   name: 'form-setting',

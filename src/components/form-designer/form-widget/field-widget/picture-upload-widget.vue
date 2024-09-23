@@ -54,11 +54,11 @@
 
 <script>
   import FormItemWrapper from './form-item-wrapper'
-  import emitter from '@/utils/emitter'
-  import i18n, {translate} from "@/utils/i18n";
-  import {deepClone, evalFn} from "@/utils/util";
-  import fieldMixin from "@/components/form-designer/form-widget/field-widget/fieldMixin";
-  import SvgIcon from "@/components/svg-icon/index";
+  import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+  import i18n, {translate} from "@tslc/lowcode-designer-page/utils/i18n";
+  import {deepClone, evalFn} from "@tslc/lowcode-designer-page/utils/util";
+  import fieldMixin from "@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/fieldMixin";
+  import SvgIcon from "@tslc/lowcode-designer-page/components/svg-icon/index";
 
   export default {
     name: "picture-upload-widget",

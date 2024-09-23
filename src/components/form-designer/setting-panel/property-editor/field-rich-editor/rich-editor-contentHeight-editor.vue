@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
 
   export default {
     name: "rich-editor-contentHeight-editor",

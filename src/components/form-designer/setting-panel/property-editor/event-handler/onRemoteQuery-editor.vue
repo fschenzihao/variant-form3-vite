@@ -6,8 +6,8 @@
 </template>
 
 <script>
-  import i18n from "@/utils/i18n"
-  import eventMixin from "@/components/form-designer/setting-panel/property-editor/event-handler/eventMixin"
+  import i18n from "@tslc/lowcode-designer-page/utils/i18n"
+  import eventMixin from "@tslc/lowcode-designer-page/components/form-designer/setting-panel/property-editor/event-handler/eventMixin"
 
   export default {
     name: "onRemoteQuery-editor",

@@ -1,14 +1,14 @@
 import axios from 'axios'
 
-import VFormRender from '@/components/form-render/index.vue'
-import ContainerItems from '@/components/form-render/container-item/index'
+import VFormRender from '@tslc/lowcode-designer-page/components/form-render/index.vue'
+import ContainerItems from '@tslc/lowcode-designer-page/components/form-render/container-item/index'
 
-import {registerIcon} from '@/utils/el-icons'
+import {registerIcon} from '@tslc/lowcode-designer-page/utils/el-icons'
 import 'virtual:svg-icons-register'
-import '@/iconfont/iconfont.css'
+import '@tslc/lowcode-designer-page/iconfont/iconfont.css'
 
-import { installI18n } from '@/utils/i18n'
-import { loadExtension } from '@/extension/extension-loader'
+import { installI18n } from '@tslc/lowcode-designer-page/utils/i18n'
+import { loadExtension } from '@tslc/lowcode-designer-page/extension/extension-loader'
 
 VFormRender.install = function (app) {
   installI18n(app)

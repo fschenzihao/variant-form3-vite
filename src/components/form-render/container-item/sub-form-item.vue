@@ -63,14 +63,14 @@
 </template>
 
 <script>
-  import emitter from '@/utils/emitter'
-  import i18n from '@/utils/i18n'
-  import {deepClone, generateId} from '@/utils/util'
+  import emitter from '@tslc/lowcode-designer-page/utils/emitter'
+  import i18n from '@tslc/lowcode-designer-page/utils/i18n'
+  import {deepClone, generateId} from '@tslc/lowcode-designer-page/utils/util'
   import refMixin from '../../../components/form-render/refMixin'
   import ContainerItemWrapper from './container-item-wrapper'
   import containerItemMixin from './containerItemMixin'
-  import FieldComponents from '@/components/form-designer/form-widget/field-widget/index'
-  import SvgIcon from "@/components/svg-icon/index";
+  import FieldComponents from '@tslc/lowcode-designer-page/components/form-designer/form-widget/field-widget/index'
+  import SvgIcon from "@tslc/lowcode-designer-page/components/svg-icon/index";
 
   export default {
     name: "sub-form-item",
